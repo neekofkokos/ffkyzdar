@@ -80,7 +80,17 @@
 
     <h1>Ұ*ТСЫЗ ВИДЕОЛАР, КЫЗДАР КАЗАШКИ ОСЫНДА👇🔥</h1>
 
-    <a class="btn" href="https://t.me/+tWy_6RniFIQzNWNh" target="_blank">Открыть Телеграм</a>
+    <!-- Добавляем id для отслеживания клика -->
+    <a class="btn" id="tg_open" href="https://t.me/+tWy_6RniFIQzNWNh" target="_blank">Открыть Телеграм</a>
+
+    <!-- JS для события клика (Lead) -->
+    <script>
+    document.getElementById('tg_open').addEventListener('click', function() {
+        fbq('track', 'Lead', {
+            event_name: 'telegram_click'
+        });
+    });
+    </script>
 
 </body>
 </html>
